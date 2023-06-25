@@ -1,0 +1,43 @@
+.body {
+  position: relative;
+  background-color: aquamarine;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 !important;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin-right: 50px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: 600;
+}
+
+.main {
+  width: 100vw;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding: 20px;
+}
