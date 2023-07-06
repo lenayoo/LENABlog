@@ -1,6 +1,12 @@
+import NavBar from '../NavBar'
 
 function Blog() {
-  return <div>Blog</div>
+  return (
+    <>
+      <NavBar />
+      <div>Blog</div>
+    </>
+  )
 }
 
 export default Blog

@@ -1,5 +1,12 @@
+import NavBar from '../NavBar'
+
 function TodayWord() {
-  return <div>TodayWord</div>
+  return (
+    <>
+      <NavBar />
+      <div>TodayWord</div>
+    </>
+  )
 }
 
 export default TodayWord

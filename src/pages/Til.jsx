@@ -1,5 +1,12 @@
+import NavBar from '../NavBar'
+
 function TiL() {
-  return <div>TiL</div>
+  return (
+    <>
+      <NavBar />
+      <div>Til</div>
+    </>
+  )
 }
 
 export default TiL
