@@ -1,0 +1,35 @@
+.page-body {
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  text-align: center;
+}
+
+/* TIL */
+.til-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.til-label {
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+
+.til-input {
+  margin-bottom: 20px;
+  border-radius: 4px;
+  height: 50px;
+  border: 0.5px solid gray;
+}
+
+.underline {
+  width: 80%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 3rem;
+  margin-left: 0;
+  margin-right: 0;
+}

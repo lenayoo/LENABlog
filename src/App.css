@@ -1,7 +1,7 @@
 .body {
   position: relative;
-  background-color: #1b6b93;
-  color: #001c30;
+  background-color: #068fff;
+  color: #090580;
   width: 100vw;
   height: 100vh;
   margin: 0 !important;
@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
+  color: #eeeeee;
 }
 
 ul {
@@ -25,6 +26,11 @@ li {
   cursor: pointer;
   font-size: large;
   font-weight: 600;
+}
+
+.header__li-text {
+  color: #0e2954;
+  font-weight: bold;
 }
 
 .header__li:hover {

@@ -6,22 +6,34 @@ function NavBar() {
     <>
       <ul className="header__nav">
         <li className="header__li">
-          <Link to="/">Home</Link>
+          <Link to="/" className="header__li-text">
+            Home
+          </Link>
         </li>
         <li className="header__li">
-          <Link to="/about">About</Link>
+          <Link to="/about" className="header__li-text">
+            About
+          </Link>
         </li>
         <li className="header__li">
-          <Link to="/til">TIL</Link>
+          <Link to="/til" className="header__li-text">
+            TIL
+          </Link>
         </li>
         <li className="header__li">
-          <Link to="/blog">Blog</Link>
+          <Link to="/blog" className="header__li-text">
+            Blog
+          </Link>
         </li>
         <li className="header__li">
-          <Link to="/todayWord">Today Word</Link>
+          <Link to="/todayWord" className="header__li-text">
+            Today Word
+          </Link>
         </li>
         <li className="header__li">
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" className="header__li-text">
+            Contact
+          </Link>
         </li>
       </ul>
     </>
