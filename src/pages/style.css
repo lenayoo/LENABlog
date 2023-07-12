@@ -33,3 +33,24 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+/* blog */
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.blog-title {
+  width: 500px;
+}
+
+.blog-date {
+  width: 500px;
+}
+
+.blog-content {
+  width: 500px;
+  height: 350px;
+}
