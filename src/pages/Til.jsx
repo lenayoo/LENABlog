@@ -5,16 +5,31 @@ import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
 function TiL() {
-  const [selectedDate, setSelectedDate] = useState(null)
-  const [tilInput, setTilInput] = useState('')
+  const [newData, setNewData] = useState({ selectedDate: null, tilInput: '' })
+  const [tilLog, setTilLog] = useState([])
 
   const inputChangeHandler = (e) => {
-    console.log(e.target.value)
-    setTilInput(e.target.value)
+    const { value } = e.target
+    setNewData({ ...newData, tilInput: value })
   }
 
-  const submitHandler = () => {
-    
+  const dateChangeHandler = (date) => {
+    console.log(date)
+    setNewData({ ...newData, selectedDate: date })
+  }
+
+  const submitHandler = (event) => {
+    alert('data is saved')
+    event.preventDefault()
+    // 추가적인 처리 로직을 작성하면 됩니다.
+    setTilLog((prevData) => [
+      ...prevData,
+      {
+        selectedDate: newData.selectedDate,
+        tilInput: newData.tilInput,
+      },
+    ])
+    setNewData({ selectedDate: '', tilInput: '' })
   }
 
   return (
@@ -26,19 +41,31 @@ function TiL() {
       <form className="til-form" onSubmit={submitHandler}>
         <label>Date</label>
         <DatePicker
+          name="date"
           className="til-date"
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
+          selected={newData.selectedDate}
+          onChange={dateChangeHandler}
         />
         <label className="til-label">What I did for today</label>
         <input
+          name="input"
           className="til-input"
-          value={tilInput}
+          value={newData.tilInput}
           onChange={inputChangeHandler}
         />
         <button type="submit">save</button>
       </form>
       <div className="underline"></div>
+      <ul className="til-logs">
+        {tilLog.map((log, index) => (
+          <li key={index}>
+            <h3>
+              {log.selectedDate ? log.selectedDate.toString() : 'No Date'}
+            </h3>
+            <p>{log.tilInput}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

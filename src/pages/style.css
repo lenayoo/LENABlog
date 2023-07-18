@@ -34,6 +34,11 @@
   margin-right: 0;
 }
 
+.til-logs {
+  display: flex;
+  flex-direction: column;
+}
+
 /* blog */
 .blog-form {
   display: flex;
