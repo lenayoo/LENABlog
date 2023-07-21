@@ -13,6 +13,11 @@
   margin: 0 auto;
 }
 
+.til-date {
+  width: 95%;
+  padding-left: 10px;
+}
+
 .til-label {
   margin-top: 7px;
   margin-bottom: 3px;
@@ -21,8 +26,9 @@
 .til-input {
   margin-bottom: 20px;
   border-radius: 4px;
-  height: 300px;
+  height: 70px;
   border: 0.5px solid gray;
+  padding: 10px;
 }
 
 .underline {

@@ -60,7 +60,11 @@ function TiL() {
         {tilLog.map((log, index) => (
           <li key={index}>
             <h3>
-              {log.selectedDate ? log.selectedDate.toString() : 'No Date'}
+              {log.selectedDate.toLocaleString('default', {
+                month: 'long',
+                day: 'numeric',
+                weekday: 'long',
+              })}
             </h3>
             <p>{log.tilInput}</p>
           </li>
