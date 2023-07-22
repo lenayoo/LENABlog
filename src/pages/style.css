@@ -77,7 +77,8 @@
 /* Today word */
 .todayword-quote {
   background-color: #9be8d8;
-  margin-top: 5rem;
+  margin: 6em auto;
   padding: 8px 15px;
   border-radius: 4px;
+  width: 60%;
 }
