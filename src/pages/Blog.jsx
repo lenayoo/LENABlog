@@ -7,6 +7,8 @@ function Blog() {
   const [date, setDate] = useState(null)
   const [content, setContent] = useState('')
 
+  const [blogContent, setBlogContent] = useState([])
+
   const titleChangeHandler = (e) => {
     console.log(e.target.value)
     setTitle(e.target.value)
@@ -22,13 +24,29 @@ function Blog() {
     setContent(e.target.value)
   }
 
+  const submitHandler = (e) => {
+    alert('작성하신 블로그 내용이 저장되었습니다.')
+    e.preventDefault()
+    setBlogContent((prevBlog) => [
+      ...prevBlog,
+      {
+        title: title,
+        date: date,
+        content: content,
+      },
+    ])
+    setTitle('')
+    setDate('')
+    setContent('')
+  }
+
   return (
     <div className="page-body">
       <div className="page-header">
         <NavBar />
       </div>
       <h1>Blog</h1>
-      <form className="blog-form">
+      <form className="blog-form" onSubmit={submitHandler}>
         <label>Title</label>
         <input
           className="blog-title"
@@ -54,6 +72,16 @@ function Blog() {
         <button>저장하기</button>
       </form>
       <div className="underline"></div>
+
+      {blogContent.map((oneBlog, index) => {
+        return (
+          <li key={index}>
+            <h1>{oneBlog.title}</h1>
+            <p>{oneBlog.date}</p>
+            <h3>{oneBlog.content}</h3>
+          </li>
+        )
+      })}
     </div>
   )
 }

@@ -19,7 +19,7 @@ function TiL() {
   }
 
   const submitHandler = (event) => {
-    alert('data is saved')
+    alert('오늘의 Today I Learned가 저장되었습니다')
     event.preventDefault()
     // 추가적인 처리 로직을 작성하면 됩니다.
     setTilLog((prevData) => [
