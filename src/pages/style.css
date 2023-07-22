@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+/* About */
+.about-intro {
+  width: 60%;
+  margin: 6em auto;
+}
+
 /* TIL */
 .til-form {
   display: flex;
