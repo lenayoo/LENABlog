@@ -73,3 +73,11 @@
   padding: 0 0 0 10px;
   margin-bottom: 20px;
 }
+
+/* Today word */
+.todayword-quote {
+  background-color: #9be8d8;
+  margin-top: 5rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+}
